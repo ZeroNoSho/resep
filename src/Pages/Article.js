@@ -97,7 +97,7 @@ class Article extends Component {
               </button>
             </div>
           </div>
-          <div className="cardHome col-sm-6 col-md-8">
+          <div className="cardHome cardHome1 col-sm-6 col-md-8">
             <div className="row">
               <Accordion
                 description={this.state.description}

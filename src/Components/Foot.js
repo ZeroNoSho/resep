@@ -24,7 +24,7 @@ const Foot = () => (
             <tbody>
               <tr>
                 <td className="tr">
-                  <Link to={"/About"} className="ari1">
+                  <Link to={"/Recipes"} className="ari1">
                     Favorit
                   </Link>
                 </td>
@@ -32,7 +32,7 @@ const Foot = () => (
               </tr>
               <tr>
                 <td className="tr">
-                  <Link to={"/About"} className="ari1">
+                  <Link to={"/Article"} className="ari1">
                     Article
                   </Link>
                 </td>
