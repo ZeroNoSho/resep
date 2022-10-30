@@ -1,0 +1,450 @@
+.navbar-brand {
+  margin-left: 40px;
+  color: black !important;
+  font-weight: bold;
+  font-size: 25px;
+}
+.inputnav {
+  margin-right: 40px;
+}
+.nav-item {
+  margin-left: 50px;
+  color: black !important;
+}
+#navbar {
+  background-color: white;
+}
+.btn {
+  border: 1px solid black;
+}
+.zero {
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  margin-right: 10px;
+}
+.zero1 {
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  width: 100px;
+  margin-left: 10px;
+}
+.dec {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.first {
+  background-color: #fbe0dc;
+  display: flex;
+  border-radius: 75px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.imageCover {
+  width: 50%;
+  margin-right: 40px;
+  border-radius: 25px;
+}
+.new {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.btn-home2 {
+  border: "none";
+  background-color: black;
+  width: 200px;
+  margin-top: 20px;
+}
+.navbar-toggler-icon{
+  color: black;
+}
+.formHome {
+  margin-bottom: 30px;
+}
+.list-group-item {
+  border: none;
+  width: 250px;
+}
+.h1Home {
+  font-size: 50px;
+}
+.btnHome {
+  background-color: #fbe0dc00;
+  border: none;
+}
+.card-body1 {
+  padding: 0px !important;
+}
+.cardHome {
+  margin-left: 20px;
+}
+.cardHome {
+  margin-bottom: 40px;
+  height: 350px;
+  border: none;
+}
+.btn-home1 {
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 0px;
+}
+.h5cool {
+  text-align: left;
+}
+
+.row-about {
+  margin-top: 30px;
+}
+.p-about {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.about-card {
+  text-align: justify;
+}
+.img-about {
+  width: 50%;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+.textArr {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.textArr2 {
+  margin-top: 30px;
+}
+.listArr {
+  margin-top: 80px;
+}
+.articleCont {
+  margin-top: 30px;
+}
+.listArr .active {
+  background-color: black;
+}
+
+.h1Fav {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.btn-Fav {
+  border: "none";
+  background-color: black;
+  width: 350px;
+  margin-top: 20px;
+}
+.cardFav {
+  margin-top: 40px;
+  border: none;
+  height: 450px;
+}
+
+.modalImg {
+  width: 50%;
+  border-radius: 20px;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .new {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .new3 {
+    width: 100%;
+  }
+
+  .first {
+    margin-left: 0px;
+    border-radius: 25px;
+    margin-right: 0px;
+  }
+  .h1Home {
+    font-size: 35px;
+  }
+  .btn-Fav {
+    width: 250px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .cardFav {
+    margin-top: 40px;
+    border: none;
+    height: 600px;
+  }
+  .list-group-item {
+    border: none;
+    width: auto;
+  }
+  .img-about {
+    width: 50%;
+    margin-top: auto;
+    height: 60%;
+    margin-bottom: auto;
+  }
+  .nav-link {
+    margin-left: 0px;
+  }
+  .col-md-4 {
+    width: 100% !important;
+  }
+  .new {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .btn-home2 {
+    width: 100px;
+  }
+  .new3 {
+    width: 100%;
+  }
+  .cardHome {
+    height: 400px;
+  }
+  .br {
+    display: none;
+  }
+  .h1Home {
+    font-size: 35px;
+  }
+  .imageCover {
+    margin-right: 0px;
+  }
+  .first {
+    background-color: #fbe0dc;
+    display: flex;
+    border-radius: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .bottom-0 {
+    bottom: 30px !important;
+  }
+  .h1Home1 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .first {
+    background-color: #fbe0dc;
+    display: block;
+    border-radius: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .navbar-brand {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .inputnav {
+    margin-right: 0px;
+  }
+  .nav-item {
+    margin-left: 0px;
+    text-align: center;
+  }
+  #conHome {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .br {
+    display: none;
+  }
+  .h1Home {
+    font-size: 30px;
+    text-align: center;
+  }
+  .pHome {
+    text-align: center;
+  }
+  .imageCover {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-check-label {
+    text-align: center;
+    display: block;
+    margin-right: 5em;
+  }
+  .form-switch {
+    padding-left: 0px;
+    margin-left: 5em !important;
+  }
+  .new {
+    display: contents !important;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .new2 {
+    width: 100%;
+  }
+  .new3 {
+    width: 100%;
+  }
+  .cardHome {
+    height: 450px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .new4 {
+    --bs-gutter-x: 0rem !important;
+  }
+  .btn-Fav {
+    width: 300px;
+  }
+  .new5 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .list-group-item {
+    width: auto;
+    text-align: center;
+  }
+  .list-group {
+    margin-bottom: 20px;
+  }
+  .aboutnew {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .modalImg {
+    width: 100%;
+  }
+  .new6 {
+    display: contents !important;
+  }
+  .img-about {
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .newAbout {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 380px) {
+  .bottom-0 {
+    bottom: 0px !important;
+  }
+  .h1Home1 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .first {
+    background-color: #fbe0dc;
+    display: block;
+    border-radius: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .navbar-brand {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .inputnav {
+    margin-right: 0px;
+  }
+  .nav-item {
+    margin-left: 0px;
+    text-align: center;
+  }
+  #conHome {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .br {
+    display: none;
+  }
+  .h1Home {
+    font-size: 30px;
+    text-align: center;
+  }
+  .pHome {
+    text-align: center;
+  }
+  .imageCover {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-check-label {
+    text-align: center;
+    display: block;
+    margin-right: 5em;
+  }
+  .form-switch {
+    padding-left: 0px;
+    margin-left: 5em !important;
+  }
+  .new {
+    display: contents !important;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .new2 {
+    width: 100%;
+  }
+  .new3 {
+    width: 100%;
+  }
+  .cardHome {
+    height: 380px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .new4 {
+    --bs-gutter-x: 0rem !important;
+  }
+  .btn-Fav {
+    width: 300px;
+  }
+  .new5 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .list-group-item {
+    width: auto;
+    text-align: center;
+  }
+  .list-group {
+    margin-bottom: 20px;
+  }
+  .aboutnew {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .modalImg {
+    width: 100%;
+  }
+  .new6 {
+    display: contents !important;
+  }
+  .img-about {
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .newAbout {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
