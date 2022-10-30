@@ -5,9 +5,20 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Article from "./Pages/Article";
 import Favorite from "./Pages/Favorit";
+import Foot from "./Components/Foot";
 
 class App extends Component {
   render() {
+    let now = new Date();
+    let dname = now.getDay(),
+      mo = now.getMonth(),
+      dnum = now.getDate(),
+      yr = now.getFullYear();
+
+    let months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+    let week = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    let values = [week[dname], months[mo], dnum, yr];
+
     return (
       <Router>
         <div>
@@ -44,9 +55,10 @@ class App extends Component {
                     </Link>
                   </li>
                 </ul>
-                <div className="form-check form-switch">
-                  <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-                  <label className="form-check-label">Light/Dark Mode</label>
+                <div className="tgl">
+                  <p className="navbar-item">
+                    {values[0]} / {values[2]} / {values[1]} / {values[3]}
+                  </p>
                 </div>
               </div>
             </div>
@@ -58,6 +70,7 @@ class App extends Component {
             <Route path="/About" element={<About />} />
           </Routes>
         </div>
+        <Foot></Foot>
       </Router>
     );
   }

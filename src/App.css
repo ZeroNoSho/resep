@@ -7,12 +7,19 @@
 .inputnav {
   margin-right: 40px;
 }
+.hvvg {
+  width: 100% !important;
+}
 .nav-item {
   margin-left: 50px;
   color: black !important;
 }
 #navbar {
   background-color: white;
+}
+.tgl {
+  margin-top: 10px;
+  margin-right: 40px !important;
 }
 .btn {
   border: 1px solid black;
@@ -59,7 +66,7 @@
   width: 200px;
   margin-top: 20px;
 }
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   color: black;
 }
 .formHome {
@@ -79,8 +86,37 @@
 .card-body1 {
   padding: 0px !important;
 }
-.cardHome {
+.cardHome1 {
   margin-left: 20px;
+  height: auto !important;
+}
+.cardHome1 {
+  height: auto !important;
+}
+.tables {
+  width: 100%;
+}
+.box {
+  margin-top: 50px;
+  width: 100% !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 2%);
+  color: #4a4a4a;
+  display: block;
+  padding: 1.25rem;
+}
+.tr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.tables .ari12 {
+  color: #363636;
+  font-size: 1.5rem !important;
+  font-weight: 600;
+  line-height: 1.125;
 }
 .cardHome {
   margin-bottom: 40px;
@@ -149,6 +185,10 @@
   width: 50%;
   border-radius: 20px;
 }
+.ari1{
+  text-decoration: none;
+  color: #363636;
+}
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .new {
@@ -174,6 +214,15 @@
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
+  #awe .col-md-4 {
+    width: 33% !important;
+  }
+  .tgl {
+    margin-right: auto !important;
+  }
+  .tgl p {
+    text-align: center;
+  }
   .cardFav {
     margin-top: 40px;
     border: none;
@@ -226,8 +275,22 @@
   }
 }
 
-
 @media (min-width: 400px) and (max-width: 600px) {
+  .ari,
+  .ari1,
+  .ari12 {
+    display: block;
+    text-align: center;
+  }
+  .dwdn {
+    display: block !important;
+  }
+  .tgl {
+    margin-right: auto !important;
+  }
+  .tgl p {
+    text-align: center;
+  }
   .bottom-0 {
     bottom: 30px !important;
   }
@@ -339,6 +402,21 @@
 }
 
 @media (min-width: 200px) and (max-width: 380px) {
+  .ari,
+  .ari1,
+  .ari12 {
+    display: block;
+    text-align: center;
+  }
+  .dwdn {
+    display: block !important;
+  }
+  .tgl {
+    margin-right: auto !important;
+  }
+  .tgl p {
+    text-align: center;
+  }
   .bottom-0 {
     bottom: 0px !important;
   }

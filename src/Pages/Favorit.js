@@ -41,9 +41,9 @@ class Favorite extends Component {
   };
 
   componentDidMount() {
-    if (JSON.parse(localStorage.getItem("Makanan")) === null) {
+    if (JSON.parse(localStorage.getItem("Makanan1")) === null) {
     } else {
-      this.setState({ Fav: JSON.parse(localStorage.getItem("Makanan")) });
+      this.setState({ Fav: JSON.parse(localStorage.getItem("Makanan1")) });
     }
   }
 
@@ -61,9 +61,9 @@ class Favorite extends Component {
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
         let i = event.target.dataset.key;
-        let makan1 = JSON.parse(localStorage.getItem("Makanan"));
+        let makan1 = JSON.parse(localStorage.getItem("Makanan1"));
         makan1.splice(i, 1);
-        localStorage.setItem("Makanan", JSON.stringify(makan1));
+        localStorage.setItem("Makanan1", JSON.stringify(makan1));
         this.setState({ Fav: makan1 });
       }
     });

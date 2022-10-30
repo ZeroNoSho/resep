@@ -12,7 +12,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Makanan: [],
+      nusa: 1,
+      nameKey: "",
+      botton: false,
+      Makanan: "",
       resep: [],
       detailsResep: [],
       aut: [],
@@ -47,10 +50,13 @@ class Home extends Component {
   handlerListOnClick = (event) => {
     event.preventDefault();
     let nama = event.target.name;
+    this.setState({ botton: false });
+    this.setState({ nameKey: nama });
     axios
       .get(`https://masak-apa-tomorisakura.vercel.app/api/category/recipes/${nama}`)
       .then((response) => {
         this.setState({ resep: response.data.results });
+        this.setState({ nusa: 0 });
       })
       .catch((error) => {
         console.log(error);
@@ -83,14 +89,17 @@ class Home extends Component {
 
   onSubmitHandler = (event) => {
     event.preventDefault();
-    axios
-      .get(`https://masak-apa-tomorisakura.vercel.app/api/search/?q=${this.state.Makanan}`)
-      .then((response) => {
-        this.setState({ resep: response.data.results });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (this.state.Makanan !== "") {
+      this.setState({ botton: true });
+      axios
+        .get(`https://masak-apa-tomorisakura.vercel.app/api/search/?q=${this.state.Makanan}`)
+        .then((response) => {
+          this.setState({ resep: response.data.results });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   onClickFavoriteHandler = (event) => {
@@ -150,6 +159,37 @@ class Home extends Component {
     event.target.setAttribute("disabled", "true");
   };
 
+  onLoadHandler = () => {
+    if (this.state.nameKey === "") {
+      const nus = this.state.nusa + 1;
+      this.setState({ nusa: nus });
+      axios
+        .get(`https://masak-apa-tomorisakura.vercel.app/api/recipes/${nus}`)
+        .then((response) => {
+          response.data.results.forEach((e) => {
+            this.state.resep.push(e);
+          });
+        })
+        .catch((error) => {
+          console.log("error", error);
+        });
+    } else {
+      const nus = this.state.nusa + 1;
+      this.setState({ nusa: nus });
+      this.setState({ botton: false });
+      axios
+        .get(`https://masak-apa-tomorisakura.vercel.app/api/category/recipes/${this.state.nameKey}/${nus}`)
+        .then((response) => {
+          response.data.results.forEach((e) => {
+            this.state.resep.push(e);
+          });
+        })
+        .catch((error) => {
+          console.log("error", error);
+        });
+    }
+  };
+
   render() {
     if (localStorage.getItem("Makanan1") === null) {
       localStorage.setItem("Makanan1", "[]");
@@ -179,9 +219,8 @@ class Home extends Component {
             <h5 className="new5">Menu Sepesial: </h5>
             <ListGroup menuPauk={this.state.menuSep} keyPauk={this.state.menuSep2} onClick={this.handlerListOnClick} onSubmi1={this.onClickHandler} />
           </div>
-
-          <div className="cardHome col-sm-6 col-md-8">
-            <div className="row new4">
+          <div className="cardHome cardHome1 col-sm-6 col-md-8">
+            <div id="awe" className="row new4">
               {this.state.resep.map((e, i) => (
                 <div key={i} className="col-md-4">
                   <div className="cardHome card">
@@ -200,7 +239,7 @@ class Home extends Component {
                         data-difficulty={e.difficulty}
                         data-title={e.title}
                         data-thumb={e.thumb}
-                        className="btn-home2  btn btn-primary position-absolute bottom-0 start-50 translate-middle-x"
+                        className="btn-home2  btn btn-dark position-absolute bottom-0 start-50 translate-middle-x"
                         type="button"
                         disabled={nama1.find((c) => c.key === e.key)}
                       >
@@ -210,6 +249,9 @@ class Home extends Component {
                   </div>
                 </div>
               ))}
+              <button disabled={this.state.botton} className="btn btn-home2 btn-dark hvvg" onClick={this.onLoadHandler}>
+                Load More
+              </button>
               <Modal CloseHandler={this.CloseHandler} step={this.state.step} detailsResep={this.state.detailsResep} aut={this.state.aut} ingredient={this.state.ingredient} />
             </div>
           </div>
